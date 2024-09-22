@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { FlatList } from 'react-native';
 import CardHorizontalFood from './food';
+import data from '../../../db.json';
 
 export interface FoodTypes {
   id: string
@@ -28,7 +29,7 @@ const Trending = () => {
 
   return (
     <FlatList
-      data={foods}
+      data={data.foods}
       renderItem={(row) => <CardHorizontalFood food={row.item} />}
       horizontal={true}
       contentContainerStyle={{ gap: 14, paddingLeft: 16, paddingRight: 16 }}

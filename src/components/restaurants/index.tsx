@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { FlatList } from 'react-native';
 import Restaurant from './restaurant';
+import data from '../../../db.json';
 
 export interface RestaurantTypes {
   id: string;
@@ -22,7 +23,7 @@ const Restaurants = () => {
   }, []);
   return (
     <FlatList
-      data={restaurants}
+      data={data.restaurants}
       renderItem={(row) => <Restaurant restaurant={row.item} />}
       horizontal={true}
       contentContainerStyle={{ gap: 14, paddingLeft: 16, paddingRight: 16 }}

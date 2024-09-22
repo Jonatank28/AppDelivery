@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
-import { FlatList, View } from 'react-native';
+import { View } from 'react-native';
 import ListItem from './listItem';
+import data from '../../../db.json';
 
 export interface ListTypes {
   id: string;
@@ -22,7 +23,7 @@ const List = () => {
   }, []);
   return (
     <View className='px-4 flex flex-col flex-1 mb-11'>
-      {list.map((item) => (
+      {data.restaurants.map((item) => (
         <ListItem key={item.id} restaurant={item} />
       ))}
     </View>

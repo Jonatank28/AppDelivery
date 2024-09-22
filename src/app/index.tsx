@@ -1,19 +1,19 @@
 import { ScrollView, View } from 'react-native';
 import Header from '../components/header';
-import Constants from 'expo-constants';
 import Baner from '../components/banner';
 import Search from '../components/search';
 import Section from '../components/section';
 import Trending from '../components/trending';
 import Restaurants from '../components/restaurants';
 import List from '../components/list';
+import { StatusBar } from 'expo-status-bar';
 
-const statusBarHeight = Constants.statusBarHeight;
 
 const Page = () => {
   return (
     <ScrollView className='flex flex-1 bg-slate-200' showsVerticalScrollIndicator={false}>
-      <View className='w-full px-4' style={{ marginTop: statusBarHeight + 8 }}>
+      <StatusBar style="auto" backgroundColor='#fff' />
+      <View className='w-full px-4 mt-6'>
         <Header />
         <Baner />
         <Search />
