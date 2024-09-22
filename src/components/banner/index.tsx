@@ -9,19 +9,13 @@ const Baner = () => {
           className='w-full h-36 md:60 rounded-2xl' key='1'
           onPress={() => console.log('clicou no banner 1')}
         >
-          <Image source={require("../../assets/images/banner1.jpg")} className='w-full h-36 rounded-2xl' />
+          <Image source={require("../../assets/images/banner1.png")} className='w-full h-36 rounded-2xl' />
         </Pressable>
         <Pressable
           className='w-full h-36 md:60 rounded-2xl' key='2'
           onPress={() => console.log('clicou no banner 2')}
         >
-          <Image source={require("../../assets/images/banner2.jpg")} className='w-full h-36 rounded-2xl' />
-        </Pressable>
-        <Pressable
-          className='w-full h-36 md:60 rounded-2xl' key='3'
-          onPress={() => console.log('clicou no banner 3')}
-        >
-          <Image source={require("../../assets/images/banner3.jpg")} className='w-full h-36 rounded-2xl' />
+          <Image source={require("../../assets/images/banner2.png")} className='w-full h-36 rounded-2xl' />
         </Pressable>
       </PagerView >
     </View >
